@@ -1,0 +1,60 @@
+body {
+color:navy;
+background:white;
+
+p:nth-child(odd) /*wszystkie parzyste p na tej stronie*/
+{
+  color:red;
+  background: yellow;
+  padding:4px;
+}
+p:hover{
+    border: solid 3px red;
+    border-radius: 10px;
+   
+
+}
+
+p /*wszystkie znacziki p na tej stronie*/
+{
+  border: solid 3px rgb(0, 255, 42);
+  padding:10px;
+}
+
+p:nth-child(odd):hover {background:lightblue;}
+
+p:nth-child(even):hover {background:lightgray;}
+}
+
+a {text-decoration:none;  /*wyrzucam podkreślenie z linku*/
+    color:darkgreen;
+    } 
+  a:hover /*link wskazany myszą*/
+  {
+    box-shadow: 4px 4px 4px rgb(90, 170, 138);
+    text-shadow: 10px 10px 10px rgb(36, 66, 36);
+    border-radius: 20px;
+    
+  }
+
+
+  #identyfikator1 /*konkretny obiekt*/
+{
+  box-shadow: 10px 5px 10px green;
+}
+.klasa1 /*podobne obiekty*/
+{
+  border-radius:20px;
+}
+
+.light
+{
+ color:orange;
+}
+
+.dark
+{
+color:darkgreen;
+}
+
+}
