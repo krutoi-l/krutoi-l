@@ -1,11 +1,119 @@
 <!DOCTYPE html>
 <html>
+<style>
+
+
+body{
+
+    background-color: rgb(115, 141, 159);
+    p{
+       color: rgb(255, 255, 255)
+    }
+}
+@media only screen and (min-width: 1000px){
+    body{
+        display: grid;
+        grid-template-areas: 
+        "head head"
+        "content navig"
+        "foot foot";
+        grid-template-columns: 3fr 1fr;
+    }
+}
+
+
+
+
+
+
+header{
+    grid-area: head;
+    background-color: rgb(26, 134, 210);
+    height: 150px;
+
+}
+
+main{
+    grid-area: content;
+}
+
+nav{
+    grid-area: navig;
+    background-color: rgb(13, 71, 112);
+    font-size:30px
+   
+}
+
+nav a{
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        background-color: rgb(26, 134, 210);;
+        border-style: none none none solid;
+        border-width: 5px;
+        border-color: rgb(255, 255, 255);
+}
+
+nav a:hover{
+        color: rgb(26, 134, 210);
+        background-color: rgb(255, 255, 255);;
+        border-style: solid;
+        border-width: 5px;
+        border-color: rgb(26, 134, 210);
+}
+
+
+
+footer{
+    grid-area: foot;
+    background-color: rgb(13, 71, 112);
+    p{
+        color: rgb(26, 134, 210)
+    }
+}
+
+
+
+
+
+</style>
 <body>
-<h1>Hello World</h1>
-<p>bibas with bobas</p>
-<hr>
-<a href="2.html">suspicious link</a>
-<hr>
-<img src= 'image.jpg'>
+
+    <header>
+        <center>
+        <img src="images/head_logo.png"
+        height="100"
+        width="500">
+        </center>
+    </header>
+
+    <nav>
+        <p>
+            <table border="0">
+                <tr>
+                    <td><p><a href="index.html">MAIN PAGE</a></p></td>
+                </tr>
+                <tr>
+                    <td><p><a href="2.html">ABOUT PAGE</a></p></td>
+                </tr>
+            </table>    
+        </p>
+    </nav>
+
+
+    <main>
+        <p>main words</p>
+        <img src="image.jpg"
+        height="700"
+        width="500">
+    </main>
+
+   
+
+    <footer>
+        <center><p>hosted on GitHub pages. Contact email: <u><code>cooladdress@gmail.com</code></u></p>
+                <p>have a nice day</p></center>
+    </footer>
+
+
 </body>
 </html>

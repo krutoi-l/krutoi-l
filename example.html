@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+
+<style>
+@media only screen and (min-width: 1000px){ 
+  
+  body /*cała strona*/
+  {
+  display: grid;					/* ta strona używa techniki grid */
+  grid-template-columns: 1fr 3fr; 	/* dwie kolumny w proporcji 1 do 3 */
+  grid-template-areas:
+  "naglowek naglowek"				/* pierwszy wiersz to tylko nagłówek */
+  "nawigacja tresc"					/* drugi to nawigacja i treść */
+  "stopka stopka"	 				/* a trzeci to połączona stopka */
+  }
+  
+}
+
+
+
+header								/* teraz tylko dowiąż nazwy do bloków */
+{
+	grid-area: naglowek;
+}
+
+nav
+{
+	grid-area: nawigacja;
+}
+nav a 								/* linki, ale tylko te wewnątrz NAV */
+{
+	text-decoration:none;
+	box-shadow: 2px 3px 7px gray;
+	padding:5px;
+	margin:20px;
+}
+nav a:hover
+{
+	background: lightgray;
+}
+
+main
+{ 
+	grid-area: tresc;
+}
+
+footer
+{
+	grid-area: stopka;
+}
+
+
+.bloki 								/* a tu tylko ramka wokół każdego z bloków */
+{
+  border-radius:3px;
+  border: 1px outset navy;
+  margin:2px;
+}
+
+
+</style>
+
+<title></title>
+</head>
+
+<body>
+
+<header class=bloki><center><h1>Wielki tytuł albo odpowiednia grafika</header>
+
+<nav  class=bloki><h1>Główne Menu: <br><br><a href=https://szkola.buz.info.pl>Link1</a> <a href=https://szkola.buz.info.pl>Link2</a></nav>
+
+<main class=bloki>
+<center><h1>Główna zawartość:</h1> <p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempor feugiat facilisis. In vulputate, ipsum a convallis ullamcorper, erat tellus lobortis tortor, id mattis nibh nibh a ex. Sed laoreet faucibus placerat. Nulla vitae erat auctor neque feugiat faucibus nec vel nunc. Integer et faucibus sapien. Vivamus fermentum sed leo a tempor. 
+</p>
+
+</main>
+
+<footer class=bloki><center>Stopka. Np. autor taki to a taki, 2025r.</footer>
+
+</body>
+</html>
